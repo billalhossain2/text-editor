@@ -30,6 +30,10 @@ footer {
     background: #f0ecec;
 }
 
+.active{
+  outline: solid green 0.5px;
+}
+
 /* ======================header styles===================  */
 /* navbar style  */
 nav {
@@ -103,6 +107,35 @@ nav > div {
   display: inline;
 }
 
+.text-color-container{
+  position: relative;
+}
+
+.text-color-box-container{
+  padding: 5px;
+  background: #e4dfdf;
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  z-index: 5;
+  margin-top:8px;
+  column-gap:5px;
+  left:-10000px;
+}
+
+.toggleTextColor{
+  left:0;
+}
+
+.text-color-box-container div{
+  width:20px;
+  height: 20px;
+}
+
+.text-color-box-container div:hover{
+  outline: solid green 1px;
+}
+
 /* paragraph styles  */
 .paragraph {
   position: relative;
@@ -135,4 +168,5 @@ main{
     width:50%;
     margin-top:20px;
     box-shadow: 0.1px 0.1px 5px, -0.1px -0.1px 5px;
+    overflow: auto;
 }
