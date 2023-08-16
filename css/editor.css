@@ -1,0 +1,138 @@
+/* reset browser default styles  */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* common styles  */
+footer {
+  text-align: center;
+  color: gray;
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+}
+
+.clipboard,
+.paragraph,
+.editing,
+.font {
+  padding: 10px 20px;
+}
+
+.hover-outline{
+    padding:5px;
+}
+
+.hover-outline:hover{
+    outline: solid green 0.5px;
+    cursor:default;
+    background: #f0ecec;
+}
+
+/* ======================header styles===================  */
+/* navbar style  */
+nav {
+  border-bottom: 1px solid #e2d9d9;
+  display: flex;
+  gap: 10px;
+}
+
+nav > div {
+  border-right: solid 1px #d1c7c7;
+}
+
+/* Clipboard styles  */
+.clipboard {
+  position: relative;
+}
+.clipboard-body {
+  display: flex;
+  gap: 15px;
+  line-height: 30px;
+}
+.paste {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.fa-clipboard {
+  font-size: 3rem;
+}
+
+.cut:hover, .copy:hover, .paste:hover{
+    outline: solid green 0.5px;
+}
+
+.copy{
+    color:gray;
+}
+.cut{
+    color:gray;
+}
+
+/* Font styles  */
+.font {
+  position: relative;
+}
+.font-family {
+}
+
+.font-size {
+}
+
+.uppercase {
+  margin: 0 5px;
+}
+.uppercase {
+}
+
+.lowercase {
+}
+.lowercase i {
+  font-size: 12px;
+}
+.text-formate {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.color-picker-container {
+  display: inline;
+}
+.text-color-container {
+  display: inline;
+}
+
+/* paragraph styles  */
+.paragraph {
+  position: relative;
+}
+.paragraph span {
+  margin-right: 15px;
+}
+
+.editing {
+  position: relative;
+}
+
+.editing-options{
+    line-height: 25px;
+    padding-bottom: 10px;
+}
+
+/* main styles  */
+main{
+    background-color: #C5CFDF;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+}
+
+.writting-baord{
+    background: #fff;
+    outline: none;
+    padding:20px 40px;
+    width:50%;
+    margin-top:20px;
+    box-shadow: 0.1px 0.1px 5px, -0.1px -0.1px 5px;
+}
