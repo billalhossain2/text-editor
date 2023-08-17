@@ -223,6 +223,46 @@ main {
   cursor: pointer;
 }
 
+/* replace toast  */
+.replace-toast {
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  max-width: 400px;
+  background: #f1eded;
+  border: solid green 1px;
+  position: absolute;
+  align-self: end;
+  top:-100000px;
+  /* top: 90px; */
+}
+
+.replace-toast header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.replace-toast table {
+  padding: 10px;
+}
+
+.replace-toast table tr td {
+  padding-bottom: 5px;
+}
+
+.replace-toast table tr td input,
+button {
+  padding: 5px 10px;
+  outline: none;
+  border: none;
+  border: solid green 1px;
+}
+
+.replace-toast table tr td button {
+  cursor: pointer;
+}
 /* Not found toast  */
 #notfound {
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);

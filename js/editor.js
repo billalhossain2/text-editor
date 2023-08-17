@@ -80,6 +80,15 @@ font.addEventListener('click', (ev)=>{
     }else if(ev.target.classList.contains("fa-sort-down") || ev.target.classList.contains("decrease-font") || ev.target.classList.contains("fa-down")){
         currentSize--;
         textArea.style.fontSize = `${currentSize}px`
+    }else if(ev.target.classList.contains('hightlighter')){
+        if(selectedTxt){
+            const highlighted = textArea.innerText.replace(selectedTxt, `<mark>${selectedTxt}</mark>`);
+            textArea.innerHTML = highlighted;
+            selectedTxt = "";
+        }else{
+            const markedTxt = `<mark>${textArea.innerText}</mark>`;
+            textArea.innerHTML = markedTxt;
+        }
     }else if(ev.target.classList.contains('text-color')){
         /*=========================TExt Color=======================*/
         colorContainer.innerHTML = "";

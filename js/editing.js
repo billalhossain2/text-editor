@@ -59,8 +59,85 @@ findBtnForm.addEventListener('click', (ev)=>{
 
 
 /*==============Replace====================*/
+const replaceOption = getElementById("replace-option")
+
+const replaceToast = getElementById("replace-toast")
+const replaceToastCrossBtn = getElementById("replace-cross-btn")
+
+const replaceFindBtn = getElementById("replace-find-btn")
+const replaceFindInputField = getElementById("replace-find-input-field")
+
+const replaceBtn = getElementById("replace-btn")
+const replaceInputField = getElementById("replace-input-field")
+
+//show the replace toast
+replaceOption.addEventListener('click', ()=>replaceToast.style.top="90px")
+
+//hide the replace toast
+replaceToastCrossBtn.addEventListener('click', ()=>replaceToast.style.top="-100000px")
+
+//activate find button after input data
+replaceFindInputField.addEventListener('keyup',(ev)=>{
+    if(ev.target.value){
+        replaceFindBtn.removeAttribute('disabled')
+    }else{
+        replaceFindBtn.setAttribute('disabled', true)
+    }
+})
+
+//activate replace button after input data
+replaceInputField.addEventListener('keyup',(ev)=>{
+    if(ev.target.value){
+        replaceBtn.removeAttribute('disabled')
+    }else{
+        replaceBtn.setAttribute('disabled', true)
+    }
+})
 
 
+//find and make higlight the text
+let foundText = "";
+replaceFindBtn.addEventListener('click', (ev)=>{
+    ev.preventDefault()
+    const paragraph = textArea.innerText;
+    const texToFind = replaceFindInputField.value;
+
+    const pattern = new RegExp(`${texToFind}`, 'gi');
+
+    if(paragraph.match(pattern)){
+        foundText = texToFind;
+        const matches = paragraph.match(pattern);
+        const newPara = paragraph.replaceAll(matches[0], `<mark>${matches[0]}</mark>`)
+        textArea.innerHTML = newPara;
+    }else{
+        textArea.innerText = paragraph;
+        const audio = new Audio("../audio/not-found.mp3");
+        foundText = "";
+        audio.play()
+        notFound.style.top = "0";
+        setTimeout(()=>{
+            notFound.style.top = "-100000px";
+        }, 1000)
+    }
+})
 
 
+//replace the input text with the matches
+replaceBtn.addEventListener('click', (ev)=>{
+    ev.preventDefault();
+    if(foundText){
+        const paragraph = textArea.innerText;
+        const newText = replaceInputField.value;
+       const replacedParagraph = paragraph.replaceAll(foundText, newText);
+       textArea.innerText = replacedParagraph;
+    }else{
+        alert('No matches found!')
+    }
+})
 /*==============Select All====================*/
+const selectAll = getElementById("select-all-option");
+
+selectAll.addEventListener('click', (ev)=>{
+    window.getSelection()
+    .selectAllChildren(textArea);
+})
