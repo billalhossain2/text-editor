@@ -8,29 +8,6 @@ document.addEventListener('mouseup', event => {
        } 
 })
 const textColors = ['#06D6A0', '#1B9AAA', '#ef476f', '#FFC43D', '#FFC94F', '#264653', '#344e41', '#fb8500', '#fb5607', '#e29578', '#00b4d8', '#e56b6f', '#354f52', '#004b23', '#04395e', '#1b2021', '#326771', '#1e352f', '#3f4f35', '#9bb1ff', '#e53d00', '#df2935', '#fdca40', '#540d6e', '#3bceac', '#7dcfb6', '#080708', '#0ead69']
-// clipboard
-document.getElementById("clipboard").addEventListener('click', (ev)=>{
-    if(ev.target.classList.contains('copy') || ev.target.classList.contains('fa-copy') || ev.target.classList.contains('copy-text')){
-    //   copy text 
-    const text = textArea.innerText;
-    navigator.clipboard.writeText(text)
-    .then(()=>alert("Copied text"))
-    .catch(error => console.log('Failed to copy==> ', error.message))
-    }else if(ev.target.classList.contains('cut') || ev.target.classList.contains('fa-scissors') || ev.target.classList.contains('cut-text')){
-        //   cut text 
-        const text = textArea.innerText;
-        navigator.clipboard.writeText(text)
-        .then(()=>alert("Cut text"))
-        .catch(error => console.log("Failed to cut======>", error.message))
-        textArea.innerHTML = "";
-    }else if(ev.target.classList.contains('paste') || ev.target.classList.contains('fa-clipboard') || ev.target.classList.contains('paste-text')){
-        //   paste text 
-        navigator.clipboard.readText()
-        .then(text =>{
-            textArea.innerText += text;
-        })
-    }
-})
 
 
 // font related features 
@@ -143,9 +120,6 @@ document.getElementById("font-size").addEventListener('change', ev=>{
 })
 
 
-
-
-
 // ===================================================================================color 
 const textColorWrapper = document.getElementById("text-color-wrapper")
 textColorWrapper.addEventListener('click', ev=>{
@@ -154,21 +128,5 @@ textColorWrapper.addEventListener('click', ev=>{
     }
 })
 
-//paragraph logics
-document.getElementById("paragraph").addEventListener('click', ev=>{
-    const aligns = document.querySelectorAll('.fa-align');
-    aligns.forEach(align => align.classList.remove('active'));
-    if(ev.target.classList.contains('fa-align-left')){
-        textArea.style.textAlign = "left";
-        ev.target.classList.add('active');
-    }else if(ev.target.classList.contains('fa-align-center')){
-        textArea.style.textAlign = "center";
-        ev.target.classList.add('active');
-    }else if(ev.target.classList.contains('fa-align-right')){
-        textArea.style.textAlign = "right";
-        ev.target.classList.add('active');
-    }else if(ev.target.classList.contains('fa-align-justify')){
-        textArea.style.textAlign = "justify";
-        ev.target.classList.add('active');
-    }
-})
+
+

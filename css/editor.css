@@ -20,20 +20,23 @@ footer {
   padding: 10px 20px;
 }
 
-.hover-outline{
-    padding:5px;
+.hover-outline {
+  padding: 5px;
 }
 
-.hover-outline:hover{
-    outline: solid green 0.5px;
-    cursor:default;
-    background: #f0ecec;
+.hover-outline:hover {
+  outline: solid green 0.5px;
+  cursor: default;
+  background: #f0ecec;
 }
 
-.active{
+.active {
   outline: solid green 0.5px;
 }
-
+body {
+  display: flex;
+  flex-direction: column;
+}
 /* ======================header styles===================  */
 /* navbar style  */
 nav {
@@ -63,15 +66,17 @@ nav > div {
   font-size: 3rem;
 }
 
-.cut:hover, .copy:hover, .paste:hover{
-    outline: solid green 0.5px;
+.cut:hover,
+.copy:hover,
+.paste:hover {
+  outline: solid green 0.5px;
 }
 
-.copy{
-    color:gray;
+.copy {
+  color: gray;
 }
-.cut{
-    color:gray;
+.cut {
+  color: gray;
 }
 
 /* Font styles  */
@@ -107,32 +112,32 @@ nav > div {
   display: inline;
 }
 
-.text-color-container{
+.text-color-container {
   position: relative;
 }
 
-.text-color-box-container{
+.text-color-box-container {
   padding: 5px;
   background: #e4dfdf;
   position: absolute;
   display: grid;
   grid-template-columns: repeat(4, auto);
   z-index: 5;
-  margin-top:8px;
-  column-gap:5px;
-  left:-10000px;
+  margin-top: 8px;
+  column-gap: 5px;
+  left: -10000px;
 }
 
-.toggleTextColor{
-  left:0;
+.toggleTextColor {
+  left: 0;
 }
 
-.text-color-box-container div{
-  width:20px;
+.text-color-box-container div {
+  width: 20px;
   height: 20px;
 }
 
-.text-color-box-container div:hover{
+.text-color-box-container div:hover {
   outline: solid green 1px;
 }
 
@@ -148,25 +153,88 @@ nav > div {
   position: relative;
 }
 
-.editing-options{
-    line-height: 25px;
-    padding-bottom: 10px;
+.editing-options {
+  line-height: 25px;
+  padding-bottom: 10px;
 }
 
 /* main styles  */
-main{
-    background-color: #C5CFDF;
-    height: 75vh;
-    display: flex;
-    justify-content: center;
+main {
+  background-color: #c5cfdf;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
 }
 
-.writting-baord{
-    background: #fff;
-    outline: none;
-    padding:20px 40px;
-    width:50%;
-    margin-top:20px;
-    box-shadow: 0.1px 0.1px 5px, -0.1px -0.1px 5px;
-    overflow: auto;
+.writting-baord {
+  background: #fff;
+  outline: none;
+  padding: 20px 40px;
+  width: 50%;
+  margin-top: 20px;
+  box-shadow: 0.1px 0.1px 5px, -0.1px -0.1px 5px;
+  overflow: auto;
+}
+
+/* find toast  */
+.find-toast {
+  max-width: 350px;
+  background: #fff;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  border: solid green 1px;
+  align-self: center;
+  position: absolute;
+  top: -1000000px;
+}
+.title {
+  padding: 10px;
+}
+.find-toast-head {
+  display: flex;
+  justify-content: space-between;
+}
+.find-toast-body {
+  padding: 10px;
+}
+.find-toast-body input {
+  padding: 5px 10px;
+  border: none;
+  outline: none;
+  border: solid 1px green;
+}
+.find-btn {
+  padding: 5px 15px;
+  cursor: pointer;
+}
+.fa-xmark {
+  transition: 0.5s;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
+.fa-xmark:hover {
+  background: rgb(202, 8, 8);
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Not found toast  */
+#notfound {
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  padding: 10px;
+  color: white;
+  font-size: 1.2rem;
+  position: absolute;
+  align-self: center;
+  border: solid 1px red;
+  top: -100000px;
+  z-index: 555;
+  background: #e63946;
 }

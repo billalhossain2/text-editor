@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Text Editor</title>
     <!-- fontawesome icons  -->
-    <link rel="stylesheet" href="./fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="./fontawesome/css/all.min.css" />
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -40,122 +40,166 @@
           </div>
           <footer class="clipboard-footer"><p>Clipboard</p></footer>
         </div>
-         <!-- clipboard end  -->
+        <!-- clipboard end  -->
 
-
-         <!-- font start  -->
+        <!-- font start  -->
         <div class="font" id="font">
-            <select name="font-family" id="font-family" class="hover-outline font-family">
-                <option selected disabled value="Select Font">Select Font</option>
-                <option value="Poppins">Poppins</option>
-                <option value="Inter">Inter</option>
-                <option value="Lato">Lato</option>
-                <option value="Roboto">Roboto</option>
-                <option value="Montserrat">Montserrat</option>
-            </select>
-            <select name="font-size" id="font-size" class="hover-outline font-size">
-                <option selected disabled value="Font size">Font size</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-                <option value="13">13</option>
-                <option value="14">14</option>
-                <option value="15">15</option>
-                <option value="16">16</option>
-                <option value="17">17</option>
-                <option value="18">18</option>
-                <option value="19">19</option>
-                <option value="21">21</option>
-                <option value="22">22</option>
-                <option value="23">23</option>
-                <option value="24">24</option>
-                <option value="25">25</option>
-                <option value="26">26</option>
-                <option value="27">27</option>
-                <option value="28">28</option>
-                <option value="29">29</option>
-                <option value="30">30</option>
-                <option value="31">31</option>
-            </select>
-            <span style="user-select: none;" class="increment-font hover-outline">
-                <i class="fa-solid fa-a fa-up"></i>
-                <sup><i class="fa-solid fa-sort-up"></i></sup>
-            </span>
-            <span style="user-select: none;" class="decrease-font hover-outline">
-                <i class="fa-solid fa-a fa-down"></i>
-                <sup><i class="fa-solid fa-sort-down"></i></sup>
-            </span>
+          <select
+            name="font-family"
+            id="font-family"
+            class="hover-outline font-family"
+          >
+            <option selected disabled value="Select Font">Select Font</option>
+            <option value="Poppins">Poppins</option>
+            <option value="Inter">Inter</option>
+            <option value="Lato">Lato</option>
+            <option value="Roboto">Roboto</option>
+            <option value="Montserrat">Montserrat</option>
+          </select>
+          <select
+            name="font-size"
+            id="font-size"
+            class="hover-outline font-size"
+          >
+            <option selected disabled value="Font size">Font size</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+          </select>
+          <span style="user-select: none" class="increment-font hover-outline">
+            <i class="fa-solid fa-a fa-up"></i>
+            <sup><i class="fa-solid fa-sort-up"></i></sup>
+          </span>
+          <span style="user-select: none" class="decrease-font hover-outline">
+            <i class="fa-solid fa-a fa-down"></i>
+            <sup><i class="fa-solid fa-sort-down"></i></sup>
+          </span>
 
-            <div class="text-formate">
-                <span><i class="fa-solid fa-bold hover-outline"></i></span>
-                <span><i class="fa-solid fa-italic hover-outline"></i></span>
-                <span><i class="fa-solid fa-underline hover-outline"></i></span>
-                <span><i class="fa-solid fa-strikethrough hover-outline"></i></span>
+          <div class="text-formate">
+            <span><i class="fa-solid fa-bold hover-outline"></i></span>
+            <span><i class="fa-solid fa-italic hover-outline"></i></span>
+            <span><i class="fa-solid fa-underline hover-outline"></i></span>
+            <span><i class="fa-solid fa-strikethrough hover-outline"></i></span>
 
-                <div class="color-picker-container hover-outline">
-                <i class="fa-solid fa-highlighter"></i>
-                <select name="high-lighter-selector" id="high-lighter-selector">
-                </select>
-                </div>
- 
-                <div style="user-select: none;" id="text-color-wrapper" class="text-color-container hover-outline text-color">
-                    <span><i class="fa-solid fa-font text-color"></i></span>
-                    <i class="fa-solid fa-chevron-down text-color"></i>
-                    <div id="text-color-selector" class="text-color-box-container">
-
-                    </div>
-                </div>
+            <div class="color-picker-container hover-outline">
+              <i class="fa-solid fa-highlighter"></i>
+              <select
+                name="high-lighter-selector"
+                id="high-lighter-selector"
+              ></select>
             </div>
-            <footer class="font-footer"><p>Font</p></footer>
+
+            <div
+              style="user-select: none"
+              id="text-color-wrapper"
+              class="text-color-container hover-outline text-color"
+            >
+              <span><i class="fa-solid fa-font text-color"></i></span>
+              <i class="fa-solid fa-chevron-down text-color"></i>
+              <div
+                id="text-color-selector"
+                class="text-color-box-container"
+              ></div>
+            </div>
+          </div>
+          <footer class="font-footer"><p>Font</p></footer>
         </div>
-         <!-- font end  -->
+        <!-- font end  -->
 
-
-         <!-- paragraph start  -->
+        <!-- paragraph start  -->
         <div class="paragraph" id="paragraph">
-            <span><i class="fa-solid fa-align-left hover-outline fa-align"></i></span>
-            <span><i class="fa-solid fa-align-center hover-outline fa-align"></i></span>
-            <span><i class="fa-solid fa-align-right hover-outline fa-align"></i></span>
-            <span><i class="fa-solid fa-align-justify hover-outline fa-align"></i></span>
-            <footer class="paragraph-footer"><p>Paragraph</p></footer>
+          <span
+            ><i class="fa-solid fa-align-left hover-outline fa-align"></i
+          ></span>
+          <span
+            ><i class="fa-solid fa-align-center hover-outline fa-align"></i
+          ></span>
+          <span
+            ><i class="fa-solid fa-align-right hover-outline fa-align"></i
+          ></span>
+          <span
+            ><i class="fa-solid fa-align-justify hover-outline fa-align"></i
+          ></span>
+          <footer class="paragraph-footer"><p>Paragraph</p></footer>
         </div>
         <!-- paragraph end  -->
 
         <!-- editing start  -->
         <div class="editing">
-            <div class="editing-options">
-                <p class="hover-outline">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <span>Find</span>
-                </p>
-                <p class="hover-outline">
-                    <i class="fa-solid fa-arrows-turn-to-dots"></i>
-                    <span>Replace</span>
-                </p>
-                <p class="hover-outline">
-                    <i class="fa-regular fa-object-group"></i>
-                    <span>Select all</span>
-                </p>
-            </div>
-            <footer class="editing-footer"><p>Editing</p></footer>
+          <div class="editing-options">
+            <p class="hover-outline" id="find-option">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <span>Find</span>
+            </p>
+            <p class="hover-outline">
+              <i class="fa-solid fa-arrows-turn-to-dots"></i>
+              <span>Replace</span>
+            </p>
+            <p class="hover-outline">
+              <i class="fa-regular fa-object-group"></i>
+              <span>Select all</span>
+            </p>
+          </div>
+          <footer class="editing-footer"><p>Editing</p></footer>
         </div>
         <!-- editing end  -->
       </nav>
     </header>
-    <!-- header part end  -->
+    <!-- start find toast  -->
+    <form action="#" id="find-toast" class="find-toast">
+      <header class="find-toast-head">
+        <p class="title">Find</p>
+        <i class="fa-solid fa-xmark" id="cross-btn"></i>
+      </header>
+      <div class="find-toast-body">
+        <span>Find what: </span>
+        <input type="text" id="find-input-field"/>
+        <button disabled class="find-btn" id="find-btn">Find</button>
+      </div>
+    </form>
+    <!-- end find toast  -->
 
+    <!-- not found toast  -->
+    <div id="notfound"><p>Not Found!</p></div>
+    <!-- header part end  -->
     <main>
-        <div contenteditable="true" id="text-area" class="writting-baord" 	autofocus></div>
+      <div
+        contenteditable="true"
+        id="text-area"
+        class="writting-baord"
+        autofocus
+      ></div>
     </main>
     <script src="./js/editor.js"></script>
+    <script src="./js/paragraph.js"></script>
+    <script src="./js/clipboard.js"></script>
+    <script src="./js/editing.js"></script>
   </body>
 </html>
