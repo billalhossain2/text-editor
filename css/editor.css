@@ -27,10 +27,11 @@ footer {
 .hover-outline:hover {
   outline: solid green 0.5px;
   cursor: default;
-  background: #f0ecec;
 }
 
 .active {
+  background: #006d77;
+  color:#fff;
   outline: solid green 0.5px;
 }
 body {

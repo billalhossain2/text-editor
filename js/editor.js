@@ -1,6 +1,6 @@
 //get the selected text
-const textArea = document.getElementById("text-area");
-const colorContainer = document.getElementById("text-color-selector");
+const textArea = getElementById("text-area");
+const colorContainer = getElementById("text-color-selector");
 let selectedTxt = "";
 document.addEventListener('mouseup', event => {  
        if(window.getSelection().toString().length){
@@ -81,9 +81,20 @@ font.addEventListener('click', (ev)=>{
         currentSize--;
         textArea.style.fontSize = `${currentSize}px`
     }else if(ev.target.classList.contains('hightlighter')){
+        if(ev.target.classList.contains('active')){
+            ev.target.classList.remove('active')
+        }else{
+            ev.target.classList.add('active')
+        }
+        if(textArea.innerHTML.search('</mark>') >= 0){
+            textArea.innerText = textArea.innerText
+            return;
+        }
         if(selectedTxt){
+ 
             const highlighted = textArea.innerText.replace(selectedTxt, `<mark>${selectedTxt}</mark>`);
             textArea.innerHTML = highlighted;
+            
             selectedTxt = "";
         }else{
             const markedTxt = `<mark>${textArea.innerText}</mark>`;
@@ -102,7 +113,7 @@ function changeTextColor(color){
     textArea.style.color = color;
 }
 
-document.getElementById("font-family").addEventListener('change', ev=>{
+getElementById("font-family").addEventListener('change', ev=>{
     const wholeText = textArea.innerHTML;
     if(selectedTxt){
         formatedText = wholeText.replace(selectedTxt, `<span style="font-family:${ev.target.value}">${selectedTxt}</span>`)
@@ -117,7 +128,7 @@ document.getElementById("font-family").addEventListener('change', ev=>{
         }
 })
 
-document.getElementById("font-size").addEventListener('change', ev=>{
+getElementById("font-size").addEventListener('change', ev=>{
     const wholeText = textArea.innerHTML;
     if(selectedTxt){
         formatedText = wholeText.replace(selectedTxt, `<span style="font-size:${ev.target.value}px">${selectedTxt}</span>`)
@@ -130,7 +141,7 @@ document.getElementById("font-size").addEventListener('change', ev=>{
 
 
 // ===================================================================================color 
-const textColorWrapper = document.getElementById("text-color-wrapper")
+const textColorWrapper = getElementById("text-color-wrapper")
 textColorWrapper.addEventListener('click', ev=>{
     if(ev.target.classList.contains('text-color')){
         colorContainer.classList.toggle('toggleTextColor')
